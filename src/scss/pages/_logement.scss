@@ -1,0 +1,141 @@
+.logement {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.infos-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.infos-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logement-title {
+    font-size: 18px;
+    color: $main-color;
+}
+
+.logement-location {
+    font-size: 14px;
+    color: $main-color;
+}
+
+.tags-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.host-name {
+    white-space: pre-line;
+    text-align: right;
+    font-size: 12px;
+    color: $main-color;
+}
+
+.host-photo {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.logement-menus {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+@media (min-width: 768px) {
+    .logement {
+        margin: 30px 50px;
+        gap: 30px;
+    }
+
+    .logement-title {
+        font-size: 25px;
+    }
+    
+    .logement-location {
+        font-size: 16px;
+    }
+
+    .host-name {
+        font-size: 15px;
+    }
+
+    .host-photo {
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+    }
+
+    .logement-menus {
+        gap: 35px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .logement {
+        margin: 40px 100px;
+        gap: 40px;
+    }
+
+    .infos {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .infos-2 {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .logement-title {
+        font-size: 36px;
+    }
+
+    .logement-location {
+        font-size: 18px;
+    }
+
+    .tags-container {
+        margin-top: 10px;
+    }
+
+    .host-name {
+        font-size: 18px;
+    }
+
+    .host-photo {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+    }
+
+    .logement-menus {
+        flex-direction: row;
+        gap: 50px;
+    }
+    
+}

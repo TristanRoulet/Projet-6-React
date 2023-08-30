@@ -1,0 +1,39 @@
+.tag {
+    width: fit-content;
+    min-width: 85px;
+    height: 18px;
+    padding: 10px;
+    background-color: $main-color;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag-text {
+    font-size: 10px;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .tag {
+        min-width: 100px;
+        height: 21px;
+        border-radius: 10px;
+    }
+    
+    .tag-text {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tag {
+        min-width: 115px;
+        height: 25px;
+    }
+    
+    .tag-text {
+        font-size: 14px;
+    }
+}

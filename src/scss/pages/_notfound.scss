@@ -1,0 +1,53 @@
+.not-found {
+    margin: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.Error-404 {
+    font-size: 100px;
+    font-weight: bold;
+    color: $main-color;
+}
+
+.not-exist {
+    font-size: 18px;
+    color: $main-color;
+    text-align: center;
+}
+
+.home-link {
+    font-size: 14px;
+    color: $main-color;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .Error-404 {
+        font-size: 200px;
+    }
+    
+    .not-exist {
+        font-size: 24px;
+    }
+    
+    .home-link {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .Error-404 {
+        font-size: 300px;
+    }
+    
+    .not-exist {
+        font-size: 36px;
+    }
+    
+    .home-link {
+        font-size: 18px;
+    }
+}

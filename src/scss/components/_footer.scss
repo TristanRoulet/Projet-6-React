@@ -1,0 +1,24 @@
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    display: flex;
+    justify-content: center; 
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-logo {
+    width: 120px;
+}
+
+.footer-text {
+    font-size: clamp(12px, 2.667vw, 24px);
+    color: white;
+}

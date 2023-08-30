@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import '~@fortawesome/fontawesome-svg-core/styles.css';
+
+* {
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+    font-family: 'Montserrat';
+    background-color: white;
+}
+
+// .loadingscreen {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100vh;
+//     background-color: black;
+//     opacity: 0.5;
+//     z-index: 9999;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     transition: 0.5s;
+//     visibility: visible;
+//     &::after {
+//         content: 'Loading...';
+//         color: white;
+//         font-size: 2rem;
+//         font-weight: bold;
+//     }
+// }
+
+.loading-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 32px 0;
+}
+.loading-ring div {
+box-sizing: border-box;
+display: block;
+position: absolute;
+width: 64px;
+height: 64px;
+margin: 8px;
+border: 8px solid $main-color;
+border-radius: 50%;
+animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+border-color: $main-color transparent transparent transparent;
+}
+.loading-ring div:nth-child(1) {
+animation-delay: -0.45s;
+}
+.loading-ring div:nth-child(2) {
+animation-delay: -0.3s;
+}
+.loading-ring div:nth-child(3) {
+animation-delay: -0.15s;
+}
+@keyframes loading-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
