@@ -21,15 +21,19 @@ const Carousel = ({ images }) => {
         <div className='slide'>
             <img src={images[currentSlide]} alt={`${currentSlide}`} className='slide-picture' />
         </div>
-        <button className='slideshow-btn left' onClick={prevSlide}>
-            <img src={arrow} alt='previous' className='arrow' />
-        </button>
-        <button className='slideshow-btn right' onClick={nextSlide}>
-            <img src={arrow} alt='next' className='arrow' />
-        </button>
-        <div className='slide-number'>
-            {currentSlide + 1}/{images.length}
-        </div>
+        {images.length > 1 && (
+          <>
+            <button className='slideshow-btn left' onClick={prevSlide}>
+                <img src={arrow} alt='previous' className='arrow' />
+            </button>
+            <button className='slideshow-btn right' onClick={nextSlide}>
+                <img src={arrow} alt='next' className='arrow' />
+            </button>
+            <div className='slide-number'>
+                {currentSlide + 1}/{images.length}
+            </div>
+          </>  
+        )}
       </div>
     );
   };
