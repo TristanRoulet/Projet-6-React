@@ -9,7 +9,16 @@ export default function Logement(props) {
   const { logementsData } = props;
   const { id } = useParams();
   const [logement, setLogement] = useState({});
+  const [menuIndex, openMenu] = useState(null);
 
+  const toggleMenu = (index) => {
+    if (menuIndex === index) {
+      openMenu(null)
+    } else {
+      openMenu(index)
+    }
+  }
+  
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -76,11 +85,8 @@ export default function Logement(props) {
         </div>
 
         <div className="logement-menus">
-          <Menu title="Description" description={logement.description} />
-          <Menu
-            title="Équipements"
-            description={logement.equipments && logement.equipments.join("\n")}
-          />
+          <Menu title="Description" description={logement.description}  isOpen={menuIndex === 0} onClick={() => toggleMenu(0)} />
+          <Menu title="Équipements" description={logement.equipments && logement.equipments.join("\n")} isOpen={menuIndex === 1} onClick={() => toggleMenu(1)} />
         </div>
       </div>
     );
