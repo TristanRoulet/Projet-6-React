@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import aboutImg from '../assets/images/about.png'
 import Menu from '../components/Menu.component'
 
